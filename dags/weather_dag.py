@@ -13,7 +13,7 @@ default_args = {
 with DAG(
     dag_id='weather_dag',
     default_args=default_args,
-    schedule_interval='@hourly',
+    schedule_interval='*/5 * * * *',
     catchup=False
 ) as dag:
     
